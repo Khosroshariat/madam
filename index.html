@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Easy-peasy</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="copyright">
+        <h6>Copyright © 2024 Khosro shariatzadeh</h6>
+      </div>
+      <div class="nav">
+        <div class="nav-text">
+          <i class="bx bx-code nav-img"></i>
+          <span class="nav-logo">Madam</span>
+        </div>
+        <div class="list-main">
+          <a href="https://github.com/Khosroshariat/easy-peasy" target="_blank">
+            <i class="bx bx-checkbox-square"></i>Git Repo</a
+          >
+          <a href="" target="_blank">
+            <i class="bx bx-checkbox-square"></i>Portfolio</a
+          >
+          <a href="https://www.linkedin.com/in/khosro-sh/" target="_blank">
+            <i class="bx bx-checkbox-square"></i>Linkedin</a
+          >
+        </div>
+
+        <button onclick="openMenu()" class="btn-open">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+      <div class="menubar">
+        <span onclick="closeMenu()" class="btn-close"
+          ><i class="bx bxs-x-circle"></i
+        ></span>
+        <a
+          onclick="closeMenu()"
+          class="link"
+          href="https://github.com/Khosroshariat/easy-peasy"
+          target="_blank"
+          ><i class="bx bx-checkbox-square"></i> Git Repo</a
+        >
+        <a onclick="closeMenu()" class="link" href="" target="_blank"
+          ><i class="bx bx-checkbox-square"></i> Portfolio</a
+        >
+        <a
+          onclick="closeMenu()"
+          class="link"
+          href="https://www.linkedin.com/in/khosro-sh/"
+          target="_blank"
+          ><i class="bx bx-checkbox-square"></i> Linkedin</a
+        >
+      </div>
+
+      <div class="cover cover-left"></div>
+
+      <div class="book">
+        <!-- page 1 -->
+
+        <div class="book-page page-right">
+          <div class="page-front">
+            <div class="main-page">
+              <div class="page1-items">
+                <h1 class="title">Coding project :</h1>
+                <p class="main-para">
+                  <span class="color">MADAM</span> is a palindrome. A
+                  palindrome is a word, phrase, number, or other sequence of
+                  characters that reads the same forward and backward,
+                  disregarding spaces, punctuation, and capitalization.
+                  Essentially, it's a sequence that remains unchanged when read
+                  in reverse order. In this app, on the next page, you can check
+                  whether your phrase is a Palindrome or not. And on the last
+                  page, you can find the details of the code.
+                </p>
+
+                <div class="new-items">
+                  <div>
+                    <h5><i class="bx bxs-check-shield check-mark"></i> HTML</h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i> CSS Layout
+                    </h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i> CSS
+                      Animation
+                    </h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i>
+                      Javascript Functions
+                    </h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i>
+                      Javascript If/Els
+                    </h5>
+                  </div>
+
+                  <div>
+                    <img class="img-inside" src="./assets/download.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <span class="nextprev-btn" data-page="turn-2">
+              <span class="text-btn">Next</span>
+              <i class="bx bx-chevron-right"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- page 2 -->
+
+        <div class="book-page page-right turn" id="turn-2">
+          <div class="page-front">
+            <div class="second-page">
+              <h3 class="para">Enter a phrase or word to check</h3>
+
+              <div class="text-area">
+                <input
+                  type="text"
+                  id="input"
+                  placeholder="Enter your phrase..."
+                />
+                <button onclick="checkPalindrome()" class="btn">check</button>
+              </div>
+
+              <div class="alert-box">
+                <div class="alert">
+                  <span class="alert-text" id="result"></span>
+                  <span class="alert-msg" id="msg"></span>
+                </div>
+              </div>
+            </div>
+
+            <span class="nextprev-btn" data-page="turn-3">
+              <span class="text-btn">Next</span>
+              <i class="bx bx-chevron-right"></i>
+            </span>
+
+            <span class="nextprev-btn back" data-page="turn-2">
+              <span class="back-btn">Back</span>
+              <i class="bx bx-chevron-left"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- page 3 -->
+
+        <div class="book-page page-right turn" id="turn-3">
+          <div class="page-front">
+            <div class="last-page">
+              <h1 class="title">The code :</h1>
+              <p class="main-para">
+                First, I get the input element by using getElementById method to
+                get and check any phrase or value that you put into the search
+                area inside my checkPalindrome() function. I initially added an
+                “invisible” class to remove any alert styling from the same
+                result HTML. I get the value inside the search area and create a
+                new variable “checkInput” to lowercase the letter and remove any
+                punctuation, special characters, or spaces by using
+                “toLowerCase()” and “replace()” methods. replace() method is
+                used twice: The first replace(), replaces all punctuation,
+                special characters and underscores with an empty string. The
+                second replace(), removes all extra spaces by replacing one or
+                more consecutive spaces with a single space. Then I reverse the
+                checkInput variable by using “split()”, “reverse() and “join()”
+                methods. Then by using the if-else method, I check if the
+                reversed phrase is equal to the original phrase or not, if so by
+                clicking on the check button on your screen you will see the
+                result which says your entry is a palindrome, otherwise is not.
+              </p>
+            </div>
+
+            <span class="nextprev-btn back" data-page="turn-3">
+              <span class="back-btn">Back</span>
+              <i class="bx bx-chevron-left"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
