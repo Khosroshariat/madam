@@ -18,7 +18,7 @@
     --white-color: rgba(157, 143, 118, 0.261);
     --border: .125rem solid #1e3321;
     --border-btn: .125rem solid #2e766c;
-    --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
+    --box-shadow: 0 0 .6rem rgba(0, 0, 0, 1);
 }
 
 body{
@@ -290,11 +290,12 @@ body{
     margin-left: 5px;
     padding: 2px 4px;
     border-radius: 5px;
+    box-shadow: 0 0 .6rem rgba(0, 0, 0, 1);
     transition: all .5s ease;
 }
 
 .link:hover {
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 .6rem rgb(252, 251, 251);
     color: var(--text-color);
     font: bold;
 }
@@ -379,7 +380,7 @@ h5{
 
 .img-inside {
     background-color: var(--main-color);
-    width: 100GIT%;
+    width: 100%;
     border-radius: 10px;
     margin-top: 10px;
  }
